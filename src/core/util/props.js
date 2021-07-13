@@ -43,6 +43,7 @@ export function validateProp (
   }
   // check default value
   if (value === undefined) {
+    // 获取prop配置的default默认值，默认为undefined，如果为Object或者Function，需要使用function，否则提示。
     value = getPropDefaultValue(vm, prop, key)
     // since the default value is a fresh copy,
     // make sure to observe it.
